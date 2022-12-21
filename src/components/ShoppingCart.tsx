@@ -2,10 +2,15 @@ import { createContext } from "react";
 import { Offcanvas } from "react-bootstrap";
 import { useShoppingCart } from "../hooks/ShoppingCartContext";
 
-export function ShoppingCart(){
+
+type ShoppingCartProps = {
+    isOpen:boolean
+}
+
+export function ShoppingCart({ isOpen }:ShoppingCartProps){
     const { closeCart } = useShoppingCart();
     return (
-        <Offcanvas show={true} onHide={closeCart} placement="end">
+        <Offcanvas show={isOpen} onHide={closeCart} placement="end">
             <Offcanvas.Header closeButton>
                 <Offcanvas.Title>Cart</Offcanvas.Title>
             </Offcanvas.Header>
