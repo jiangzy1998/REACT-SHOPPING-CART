@@ -1,7 +1,7 @@
 import { Container } from "react-bootstrap";
 import { Routes, Route } from "react-router-dom";
 import { Navbar } from "./components/Navbar";
-import { ShoppingCartProvider } from "./hooks/ShoppingCartContext";
+import { ShoppingCartProvider } from "./context/ShoppingCartContext";
 import { About } from "./pages/About";
 import { Home } from "./pages/Home";
 import { Store } from "./pages/Store";
